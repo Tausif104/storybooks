@@ -1,0 +1,20 @@
+<div class="container full-story">
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="card card-body story-body">
+                <h3>{{story.title}} {{{editIcon story.user user story._id }}}</h3>
+                <span class="text-muted">{{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
+                <div class="body">
+                    {{{story.body}}}
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="user-info card card-body">
+                <img src="{{story.user.image}}" alt="">
+                <h3>{{story.user.displayName}}</h3>
+                <a href="/stories/user/{{story.user._id}}">More From {{story.user.firstName}}</a>
+            </div>
+        </div>
+    </div>
+</div>
